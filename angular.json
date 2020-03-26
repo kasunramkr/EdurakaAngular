@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EdurakaAngular"
+    }
+  },
+  "defaultProject": "EdurakaAngular",
+  "cli": {
+    "analytics": "08cba78d-0003-4ed0-bae5-832d442db34d"
+  }
 }
