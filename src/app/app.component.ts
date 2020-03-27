@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name: 'sa';
+  name = 'Milinda';
+  isServerEnabled = false;
+
+  getServerButtonValue() {
+    if (this.isServerEnabled) {
+      return 'OFF';
+    }
+    return 'ON';
+  }
+
+  getServerStatus() {
+    if (this.isServerEnabled) {
+      return 'Online';
+    }
+    return 'Offline';
+  }
+
+  toggle() {
+    this.isServerEnabled = !this.isServerEnabled;
+  }
 }
