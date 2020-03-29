@@ -10,6 +10,8 @@ export class AppComponent {
   isServerEnabled = false;
   currentName = '';
   classList = ['Milinda', 'Kasun'];
+  isParaOneShown = true;
+  count = 0;
 
   getServerButtonValue() {
     if (this.isServerEnabled) {
@@ -34,5 +36,17 @@ export class AppComponent {
       this.classList.push(this.currentName);
       this.currentName = '';
     }
+  }
+
+  paraToggle() {
+    this.isParaOneShown = !this.isParaOneShown;
+    this.count++;
+  }
+
+  getRedClass() {
+    if (this.count > 5) {
+      return true;
+    }
+    return false;
   }
 }

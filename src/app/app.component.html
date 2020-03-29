@@ -26,3 +26,13 @@
 </div>
 <h4>Students of the class</h4>
 <li *ngFor="let n of classList">{{n}}</li>
+
+<p>-------------------------------------------------</p>
+<div>
+  <p [ngClass]="{'red':getRedClass()}" *ngIf="isParaOneShown; else para2Block">This is para 1</p>
+  <ng-template #para2Block>
+    <p [ngClass]="{'red':getRedClass()}">This is para 2</p>
+  </ng-template>
+  <button (click)="paraToggle()">Toggle</button>
+  <p [ngClass]="{'red':getRedClass()}">{{count}}</p>
+</div>
