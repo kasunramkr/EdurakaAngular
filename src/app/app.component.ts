@@ -8,6 +8,8 @@ import {Component} from '@angular/core';
 export class AppComponent {
   name = 'Milinda';
   isServerEnabled = false;
+  currentName = '';
+  classList = ['Milinda', 'Kasun'];
 
   getServerButtonValue() {
     if (this.isServerEnabled) {
@@ -25,5 +27,12 @@ export class AppComponent {
 
   toggle() {
     this.isServerEnabled = !this.isServerEnabled;
+  }
+
+  addToClass() {
+    if (this.currentName !== '') {
+      this.classList.push(this.currentName);
+      this.currentName = '';
+    }
   }
 }
